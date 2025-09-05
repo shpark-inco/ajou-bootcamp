@@ -1,0 +1,9 @@
+sample_id	clf_group	clf_name	pred_class_1	pred_class_2	pred_class_3	pred_prob_1	pred_prob_2	pred_prob_3	extra_info	extra_info_format
+subject_a.tumor	combined	combined	Breast: Other	Lymphoid tissue	Bone/Soft tissue: Other	0.30782631023011425	0.0930058134691311	0.08869991171765883		
+subject_a.tumor	dna	dna_combined	CNS: Medulloblastoma	Breast: Other	NET: Pancreas	0.3003562465780504	0.19596326742432296	0.08417585414781448		
+subject_a.tumor	dna	gen_pos	Breast: Other	Anogenital	Bone/Soft tissue: Other	0.0772278425521584	0.06535580196476114	0.061622173319864734		
+subject_a.tumor	dna	snv96	CNS: Medulloblastoma	Bone/Soft tissue: Osteosarcoma	Kidney: Chromophobe	0.21649828133050172	0.1159832626823746	0.09477310485866224	ROS/5FU (SBS17)=5.0,4.9%	{sig_name}={count},{percent}
+subject_a.tumor	dna	event	CNS: Medulloblastoma	CNS: Pilocytic astrocytoma	Bone/Soft tissue: Cartilaginous neoplasm	0.28575576976818245	0.22580107874637056	0.11406810001230112	1: tmb.snv_count=100.0,5.3; sv.SIMPLE_DEL_20KB_1MB=0.0,2.4; driver.TP53.mut=-1e-08,0.6 || 2: tmb.snv_count=100.0,8.0; sv.MAX_COMPLEX_SIZE=2.0,1.1; sv.SIMPLE_DEL_20KB_1MB=0.0,0.2 || 3: tmb.snv_count=100.0,4.2; sv.SIMPLE_DEL_20KB_1MB=0.0,3.7; sv.SIMPLE_DUP_100KB_5MB=0.0,2.4	{pred_class_n}: {feat_name}={value},{log_odds}
+subject_a.tumor	rna	rna_combined	Lymphoid tissue	Bone/Soft tissue: GIST	CNS: Glioma	0.24192104638691206	0.22986566174955853	0.17615945472197117		
+subject_a.tumor	rna	gene_exp	Skin: Other	Bone/Soft tissue: Undiff. sarcoma	Head and neck: Other	0.26332811834072906	0.18197398080803212	0.12183306674228865		
+subject_a.tumor	rna	alt_sj	CNS: Glioma	Lymphoid tissue	Bone/Soft tissue: GIST	0.28329910313746	0.17972759449251385	0.11826839881775536		

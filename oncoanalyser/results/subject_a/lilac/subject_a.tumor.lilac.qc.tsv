@@ -1,0 +1,2 @@
+Status	ScoreMargin	NextSolutionAlleles	MedianBaseQuality	HlaYAllele	DiscardedIndels	DiscardedIndelMaxFrags	DiscardedAlignmentFragments	A_LowCoverageBases	B_LowCoverageBases	C_LowCoverageBases	ATypes	BTypes	CTypes	TotalFragments	FittedFragments	UnmatchedFragments	UninformativeFragments	HlaYFragments	PercentUnique	PercentShared	PercentWildcard	UnusedAminoAcids	UnusedAminoAcidMaxFrags	UnusedHaplotypes	UnusedHaplotypeMaxFrags	SomaticVariantsMatched	SomaticVariantsUnmatched
+PASS	3.518	C*07:01	40	NONE	0	0	0	0	0	0	1	1	1	485	388	114	1	0	0.943	0.057	0.000	6	4	1	4	0	0

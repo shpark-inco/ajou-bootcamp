@@ -1,0 +1,560 @@
+<!--
+  ~ Copyright 2013-2024, Seqera Labs
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<pre class="mermaid" style="text-align: center;">
+flowchart TB
+    subgraph " "
+    v3["Channel.fromList"]
+    v5["Channel.fromPath"]
+    v6["Channel.of"]
+    v7["Channel.of"]
+    v8["Channel.of"]
+    v11["Channel.fromPath"]
+    v16["Channel.fromPath"]
+    v21["Channel.fromPath"]
+    v26["Channel.fromPath"]
+    v127["fasta"]
+    v128["fasta_fai"]
+    v177["genome_version"]
+    v178["unmap_regions"]
+    v179["msi_jitter_sites"]
+    v180["umi_enable"]
+    v181["umi_duplex_delim"]
+    v232["functions"]
+    v233["read_length"]
+    v234["ensembl_data_resources"]
+    v235["known_fusion_data"]
+    v236["isofox_counts"]
+    v237["isofox_gc_ratios"]
+    v238["gene_ids"]
+    v239["tpm_norm"]
+    v265["heterozygous_sites"]
+    v266["target_region_bed"]
+    v292["diploid_bed"]
+    v296["gc_profile"]
+    v297["target_region_normalisation"]
+    v326["known_fusions"]
+    v327["sv_prep_blocklist"]
+    v343["decoy_sequences"]
+    v355["unmap_regions"]
+    v367["pon_breakends"]
+    v368["pon_breakpoints"]
+    v369["repeatmasker_annotations"]
+    v420["sage_actionable_panel"]
+    v421["sage_coverage_panel"]
+    v422["sage_highconf_regions"]
+    v423["ensembl_data_resources"]
+    v424["sage_known_hotspots_germline"]
+    v429["sage_known_hotspots_somatic"]
+    v475["clinvar_annotations"]
+    v476["segment_mappability"]
+    v477["driver_gene_panel"]
+    v478["ensembl_data_resources"]
+    v479["gnomad_resource"]
+    v480["sage_blocklist_regions"]
+    v481["sage_blocklist_sites"]
+    v488["sage_pon"]
+    v489["pon_artefacts"]
+    v527["gc_profile"]
+    v528["sage_known_hotspots_somatic"]
+    v529["sage_known_hotspots_germline"]
+    v530["driver_gene_panel"]
+    v531["ensembl_data_resources"]
+    v532["purple_germline_del"]
+    v533["target_region_bed"]
+    v534["target_region_ratios"]
+    v535["target_region_msi_indels"]
+    v594["ensembl_data_resources"]
+    v595["driver_gene_panel"]
+    v600["known_fusion_data"]
+    v627["ensembl_data_resources"]
+    v700["human_blastdb"]
+    v710["sigs_signatures"]
+    v760["lilac_resource_dir"]
+    v829["virusbreakenddb"]
+    v830["gridss_config"]
+    v850["virus_taxonomy_db"]
+    v851["virus_reporting_db"]
+    v852["virus_blocklist_db"]
+    v870["peach_haplotypes"]
+    v871["peach_haplotype_functions"]
+    v872["peach_drug_info"]
+    v899["cuppa_alt_sj"]
+    v900["cuppa_classifier"]
+    v941["isofox_alt_sj"]
+    v943["isofox_gene_distribution"]
+    v947["disease_ontology"]
+    v948["cohort_mapping"]
+    v949["cohort_percentiles"]
+    v950["known_fusion_data"]
+    v951["driver_gene_panel"]
+    v952["sigs_etiology"]
+    v953["ensembl_data_resources"]
+    v954["pipeline_version"]
+    v963["Channel.of"]
+    end
+    subgraph NFCORE_ONCOANALYSER
+    subgraph WGTS
+    subgraph PREPARE_REFERENCE
+    v13([DECOMP_BWAMEM2_INDEX])
+    v18([DECOMP_GRIDSS_INDEX])
+    v23([DECOMP_STAR_INDEX])
+    v28([DECOMP_HMF_DATA])
+    v12(( ))
+    v17(( ))
+    v22(( ))
+    v27(( ))
+    v29(( ))
+    v38(( ))
+    v39(( ))
+    v40(( ))
+    end
+    subgraph READ_ALIGNMENT_DNA
+    v60([BWAMEM2_ALIGN])
+    v34(( ))
+    v41(( ))
+    v47(( ))
+    end
+    subgraph READ_ALIGNMENT_RNA
+    v96([STAR_ALIGN])
+    v99([SAMTOOLS_SORT])
+    v114([SAMBAMBA_MERGE])
+    v129([GATK4_MARKDUPLICATES])
+    v98(( ))
+    end
+    subgraph REDUX_PROCESSING
+    v182([REDUX])
+    v35(( ))
+    v36(( ))
+    end
+    subgraph ISOFOX_QUANTIFICATION
+    v240([ISOFOX])
+    end
+    subgraph AMBER_PROFILING
+    v267([AMBER])
+    end
+    subgraph COBALT_PROFILING
+    v298([COBALT])
+    end
+    subgraph ESVEE_CALLING
+    v328([ESVEE_PREP])
+    v344([ESVEE_ASSEMBLE])
+    v356([ESVEE_DEPTH_ANNOTATOR])
+    v370([ESVEE_CALL])
+    v37(( ))
+    v359(( ))
+    end
+    subgraph SAGE_CALLING
+    v425([SAGE_GERMLINE])
+    v430([SAGE_SOMATIC])
+    end
+    subgraph PAVE_ANNOTATION
+    v482([PAVE_GERMLINE])
+    v490([PAVE_SOMATIC])
+    end
+    subgraph PURPLE_CALLING
+    v536([PURPLE])
+    end
+    subgraph SAGE_APPEND
+    v562([SAGE_APPEND_GERMLINE])
+    v566([SAGE_APPEND_SOMATIC])
+    end
+    subgraph LINX_ANNOTATION
+    v596([LINX_GERMLINE])
+    v601([LINX_SOMATIC])
+    end
+    subgraph LINX_PLOTTING
+    v628([LINX_VISUALISER])
+    v643([LINXREPORT])
+    end
+    subgraph BAMTOOLS_METRICS
+    v667([BAMTOOLS])
+    end
+    subgraph CIDER_CALLING
+    v701([CIDER])
+    end
+    subgraph SIGS_FITTING
+    v711([SIGS])
+    end
+    subgraph CHORD_PREDICTION
+    v727([CHORD])
+    end
+    subgraph LILAC_CALLING
+    v761([LILAC])
+    end
+    subgraph TEAL_CHARACTERISATION
+    v785([TEAL_PREP])
+    v820([TEAL_PIPELINE])
+    end
+    subgraph VIRUSBREAKEND_CALLING
+    v831([VIRUSBREAKEND])
+    v853([VIRUSINTERPRETER])
+    end
+    subgraph PEACH_CALLING
+    v873([PEACH])
+    end
+    subgraph CUPPA_PREDICTION
+    v901([CUPPA])
+    end
+    subgraph ORANGE_REPORTING
+    v955([ORANGE])
+    end
+    end
+    end
+    subgraph " "
+    v31["hmf_data"]
+    v70[" "]
+    v130[" "]
+    v131[" "]
+    v132[" "]
+    v195[" "]
+    v345[" "]
+    v357[" "]
+    v371[" "]
+    v395["unfiltered_vcf"]
+    v483[" "]
+    v491[" "]
+    v644[" "]
+    v670[" "]
+    v691[" "]
+    v694[" "]
+    v702[" "]
+    v783[" "]
+    v818[" "]
+    v821[" "]
+    v832[" "]
+    v938[" "]
+    v956[" "]
+    v957[" "]
+    v966[" "]
+    end
+    v3 --> v47
+    v5 --> v34
+    v6 --> v35
+    v7 --> v36
+    v8 --> v37
+    v11 --> v12
+    v12 --> v13
+    v13 --> v38
+    v16 --> v17
+    v17 --> v18
+    v18 --> v39
+    v21 --> v22
+    v22 --> v23
+    v23 --> v40
+    v26 --> v27
+    v27 --> v28
+    v28 --> v29
+    v29 --> v31
+    v34 --> v60
+    v38 --> v60
+    v47 --> v60
+    v60 --> v41
+    v60 --> v47
+    v47 --> v70
+    v40 --> v96
+    v47 --> v96
+    v96 --> v41
+    v96 --> v98
+    v98 --> v99
+    v99 --> v41
+    v99 --> v47
+    v47 --> v114
+    v114 --> v41
+    v114 --> v47
+    v127 --> v129
+    v128 --> v129
+    v47 --> v129
+    v129 --> v132
+    v129 --> v131
+    v129 --> v130
+    v129 --> v41
+    v129 --> v47
+    v177 --> v182
+    v177 --> v240
+    v177 --> v267
+    v177 --> v328
+    v177 --> v344
+    v177 --> v356
+    v177 --> v370
+    v177 --> v425
+    v177 --> v430
+    v177 --> v482
+    v177 --> v490
+    v177 --> v536
+    v177 --> v562
+    v177 --> v566
+    v177 --> v596
+    v177 --> v601
+    v177 --> v628
+    v177 --> v667
+    v177 --> v701
+    v177 --> v761
+    v177 --> v785
+    v177 --> v820
+    v177 --> v901
+    v177 --> v955
+    v178 --> v182
+    v179 --> v182
+    v180 --> v182
+    v181 --> v182
+    v34 --> v182
+    v35 --> v182
+    v36 --> v182
+    v47 --> v182
+    v182 --> v41
+    v182 --> v47
+    v47 --> v195
+    v232 --> v240
+    v233 --> v240
+    v234 --> v240
+    v235 --> v240
+    v236 --> v240
+    v237 --> v240
+    v238 --> v240
+    v239 --> v240
+    v34 --> v240
+    v35 --> v240
+    v47 --> v240
+    v240 --> v41
+    v240 --> v47
+    v265 --> v267
+    v266 --> v267
+    v47 --> v267
+    v267 --> v41
+    v267 --> v47
+    v292 --> v47
+    v296 --> v298
+    v297 --> v298
+    v47 --> v298
+    v298 --> v41
+    v298 --> v47
+    v326 --> v328
+    v326 --> v370
+    v327 --> v328
+    v34 --> v328
+    v47 --> v328
+    v328 --> v41
+    v328 --> v47
+    v328 --> v359
+    v343 --> v344
+    v34 --> v344
+    v35 --> v344
+    v36 --> v344
+    v37 --> v344
+    v47 --> v344
+    v344 --> v345
+    v344 --> v41
+    v344 --> v47
+    v355 --> v356
+    v34 --> v356
+    v47 --> v356
+    v356 --> v357
+    v356 --> v41
+    v356 --> v359
+    v367 --> v370
+    v368 --> v370
+    v369 --> v370
+    v34 --> v370
+    v359 --> v370
+    v370 --> v371
+    v370 --> v41
+    v370 --> v47
+    v47 --> v395
+    v420 --> v425
+    v420 --> v430
+    v421 --> v425
+    v421 --> v430
+    v422 --> v425
+    v422 --> v430
+    v423 --> v425
+    v423 --> v430
+    v424 --> v425
+    v34 --> v425
+    v35 --> v425
+    v36 --> v425
+    v47 --> v425
+    v425 --> v41
+    v425 --> v47
+    v429 --> v430
+    v34 --> v430
+    v35 --> v430
+    v36 --> v430
+    v47 --> v430
+    v430 --> v41
+    v430 --> v47
+    v475 --> v482
+    v475 --> v490
+    v476 --> v482
+    v476 --> v490
+    v477 --> v482
+    v477 --> v490
+    v478 --> v482
+    v478 --> v490
+    v479 --> v482
+    v479 --> v490
+    v480 --> v482
+    v481 --> v482
+    v34 --> v482
+    v35 --> v482
+    v47 --> v482
+    v482 --> v483
+    v482 --> v41
+    v482 --> v47
+    v488 --> v490
+    v489 --> v490
+    v34 --> v490
+    v35 --> v490
+    v47 --> v490
+    v490 --> v491
+    v490 --> v41
+    v490 --> v47
+    v527 --> v536
+    v528 --> v536
+    v529 --> v536
+    v530 --> v536
+    v531 --> v536
+    v532 --> v536
+    v533 --> v536
+    v534 --> v536
+    v535 --> v536
+    v34 --> v536
+    v35 --> v536
+    v36 --> v536
+    v47 --> v536
+    v536 --> v41
+    v536 --> v47
+    v34 --> v562
+    v35 --> v562
+    v36 --> v562
+    v47 --> v562
+    v562 --> v41
+    v562 --> v47
+    v34 --> v566
+    v35 --> v566
+    v36 --> v566
+    v47 --> v566
+    v566 --> v41
+    v566 --> v47
+    v594 --> v596
+    v594 --> v601
+    v595 --> v596
+    v595 --> v601
+    v47 --> v596
+    v596 --> v41
+    v596 --> v47
+    v600 --> v601
+    v47 --> v601
+    v601 --> v41
+    v601 --> v47
+    v627 --> v628
+    v47 --> v628
+    v628 --> v41
+    v628 --> v47
+    v47 --> v643
+    v643 --> v644
+    v643 --> v41
+    v34 --> v667
+    v47 --> v667
+    v667 --> v41
+    v667 --> v47
+    v47 --> v670
+    v47 --> v691
+    v47 --> v694
+    v700 --> v701
+    v47 --> v701
+    v701 --> v702
+    v701 --> v41
+    v710 --> v711
+    v47 --> v711
+    v711 --> v41
+    v711 --> v47
+    v34 --> v727
+    v35 --> v727
+    v36 --> v727
+    v47 --> v727
+    v727 --> v41
+    v727 --> v47
+    v760 --> v761
+    v34 --> v761
+    v35 --> v761
+    v47 --> v761
+    v761 --> v41
+    v761 --> v47
+    v47 --> v783
+    v47 --> v785
+    v785 --> v41
+    v785 --> v47
+    v47 --> v818
+    v47 --> v820
+    v820 --> v821
+    v820 --> v41
+    v829 --> v831
+    v830 --> v831
+    v34 --> v831
+    v35 --> v831
+    v36 --> v831
+    v39 --> v831
+    v47 --> v831
+    v831 --> v832
+    v831 --> v41
+    v831 --> v47
+    v850 --> v853
+    v851 --> v853
+    v852 --> v853
+    v47 --> v853
+    v853 --> v41
+    v853 --> v47
+    v870 --> v873
+    v871 --> v873
+    v872 --> v873
+    v47 --> v873
+    v873 --> v41
+    v873 --> v47
+    v899 --> v901
+    v900 --> v901
+    v47 --> v901
+    v901 --> v41
+    v901 --> v47
+    v47 --> v938
+    v941 --> v47
+    v943 --> v47
+    v947 --> v955
+    v948 --> v955
+    v949 --> v955
+    v950 --> v955
+    v951 --> v955
+    v952 --> v955
+    v953 --> v955
+    v954 --> v955
+    v47 --> v955
+    v955 --> v957
+    v955 --> v956
+    v955 --> v41
+    v963 --> v41
+    v41 --> v966
+
+</pre>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, maxTextSize: Number.MAX_SAFE_INTEGER, maxEdges: Number.MAX_SAFE_INTEGER });
+</script>
+</body>
+</html>

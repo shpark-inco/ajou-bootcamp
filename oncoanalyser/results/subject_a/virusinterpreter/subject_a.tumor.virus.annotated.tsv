@@ -1,0 +1,2 @@
+taxid	name	qcStatus	integrations	interpretation	percentageCovered	meanCoverage	expectedClonalCoverage	reported	blacklisted	driverLikelihood
+10407	Hepatitis B virus	NO_ABNORMALITIES	2	HBV	100.0	15.0424	0.0105	true	false	HIGH

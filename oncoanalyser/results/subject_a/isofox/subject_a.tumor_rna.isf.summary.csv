@@ -1,0 +1,2 @@
+SampleId,QcStatus,TotalFragments,DuplicateFragments,SplicedFragmentPerc,UnsplicedFragmentPerc,AltFragmentPerc,ChimericFragmentPerc,SplicedGeneCount,ReadLength,FragLength5th,FragLength50th,FragLength95th,EnrichedGenePercent,MedianGCRatio,ForwardStrandPercent
+subject_a.tumor_rna,FAIL_LOW_COVERAGE,405323,25320,0.997,0.000,0.002,0.000,1374,250,550,550,550,0.000,0.555,0.500

@@ -1,0 +1,8 @@
+unit	consensusType	optimalScaleRepeat4	optimalScaleRepeat5	optimalScaleRepeat6	scaleFitGradient	scaleFitIntercept	microsatelliteSkew
+A/T	NONE	0.1	0.15	0.2	0.06	-0.16	1
+C/G	NONE	0.1	0.15	0.2	0.06	-0.16	1
+AT/TA	NONE	0.15	0.2	0.25	0.06	-0.11	1
+AC/CA/GT/TG	NONE	0.15	0.2	0.25	0.06	-0.11	1
+AG/GA/CT/TC	NONE	0.15	0.2	0.25	0.06	-0.11	1
+CG/GC	NONE	0.15	0.2	0.25	0.06	-0.11	1
+3-5bp repeat	NONE	0.2	0.25	0.3	0.06	-0.06	1

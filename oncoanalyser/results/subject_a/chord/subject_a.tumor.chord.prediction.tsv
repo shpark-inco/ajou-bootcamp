@@ -1,0 +1,2 @@
+sample	p_BRCA1	p_BRCA2	p_hrd	hr_status	hrd_type	remarks_hr_status	remarks_hrd_type
+subject_a.tumor	0.002	0.016	0.018	cannot_be_determined	none	<100 indels	<30 SVs

@@ -1,0 +1,11 @@
+Chromosome	Position	Orientation	JunctionFrags	ExactSupportFrags	OtherSupportFrags	LowMapQualFrags	MaxQual	ExtraInfo	Indel	Hotspot	InitialReadId
+chr9	20414427	1	6	6	11	0	60	100	false	true	tumor:fusion.KTM2A-MLLT3.variant_1.1860
+chr9	20415001	-1	8	5	11	0	60	96	false	true	tumor:fusion.KTM2A-MLLT3.variant_recip_2.900
+chr9	118485001	-1	0	0	18	0	0	18	false	false	tumor:fusion.KTM2A-MLLT3.variant_recip_2.620
+chr9	118485039	1	0	0	17	0	0	17	false	false	tumor:fusion.KTM2A-MLLT3.variant_1.1880
+chr11	20414478	1	0	0	17	0	0	17	false	false	tumor:fusion.KTM2A-MLLT3.variant_1.1560
+chr11	20415001	-1	0	0	18	0	0	18	false	false	tumor:fusion.KTM2A-MLLT3.variant_recip_2.860
+chr11	118484976	1	7	4	11	0	60	97	false	true	tumor:fusion.KTM2A-MLLT3.variant_1.1560
+chr11	118485001	-1	7	3	13	0	60	80	false	true	tumor:fusion.KTM2A-MLLT3.variant_recip_2.940
+chr19	29815664	1	7	4	11	2	60	96	false	false	tumor:HBV_intergration.variant_1.1620
+chr19	29815665	-1	8	1	12	0	60	89	false	false	tumor:HBV_intergration.variant_1.4760
