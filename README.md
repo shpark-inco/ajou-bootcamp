@@ -1,2 +1,2 @@
-# 실습 튜토리얼 저장하기 
-<img width="1540" height="701" alt="image" src="https://github.com/user-attachments/assets/ac2b19c0-7219-4743-9c7a-d33097b5c10b" />
+# 실습 튜토리얼 cheat sheet 
+<img width="1524" height="695" alt="image" src="https://github.com/user-attachments/assets/f150ee44-a439-4621-ab0b-9666ade1fa07" />
